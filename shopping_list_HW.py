@@ -1,5 +1,5 @@
 
-shopping_lists = []
+shopping_lists = []     #array of objects
 
 
 class GroceryItem: 
@@ -20,7 +20,7 @@ class ShoppingList:
     def add_item_diff_list(self, to_list, item):
         to_list.add_item(item)
 
-
+# Displays all current made lists but not items
 def display_all_shopping_lists():
     print("Here are your current lists.")
     for index in range(0, len(shopping_lists)):
@@ -34,7 +34,7 @@ while True:
     if user_input == "1":
         user_input_list_title = input("Enter the name of store: ")
         user_input_list_address = input("Enter address of store: ")
-        shopping_list = ShoppingList(user_input_list_title, user_input_list_address)
+        shopping_list = ShoppingList(user_input_list_title, user_input_list_address)        #User input will creat object of shopping list, and object will be appended to array
         shopping_lists.append(shopping_list)
     elif user_input == "2":
         display_all_shopping_lists()
@@ -42,7 +42,7 @@ while True:
         for index in range(0, len(shopping_lists)):
             shop_choice = shopping_lists[user_input_diff_title - 1]
         user_input_grocery_item = input("Enter item name: ")
-        user_input_grocery_price = input("Enter price of item: ")
+        user_input_grocery_price = float(input("Enter price of item: "))
         user_input_grocery_quantity = input("Enter quanitity of item: ")
         item = GroceryItem(user_input_grocery_item, user_input_grocery_price, user_input_grocery_quantity)
         shop_choice.add_item(item)
