@@ -20,7 +20,8 @@ class TestShoppingList(unittest.TestCase):
         print(self.grocery_items)
         self.assertEqual(["eggs", "milk", "eggs"], self.grocery_items)
         
-            
+# how to check whats in grocery_items array after item is added
+         
     
 
 
