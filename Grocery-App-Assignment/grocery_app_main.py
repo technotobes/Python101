@@ -1,6 +1,6 @@
 
-from GroceryApp_classes import ShoppingList
-from GroceryApp_classes import GroceryItem
+from grocery_app_classes import ShoppingList
+from grocery_app_classes import GroceryItem
 from utils import display_all_shopping_lists
 # from utils import display_all_items
 
@@ -9,12 +9,13 @@ from utils import display_all_shopping_lists
 shopping_lists = []
 
 
+# Prints all items within user chosen list.
 def display_all_items():
     for index in range(0, len(shopping_lists)):
         list = shopping_lists[list_choice - 1]
-        print(f"Shopping List for {list.title}")
-        if len(list.grocery_items) == 0:
-            print("(no items)") 
+    print(f"Shopping List for {list.title}")
+    if len(list.grocery_items) == 0:
+        print("(no items)") 
     for index in range(0, len(list.grocery_items)):
         grocery_item = list.grocery_items[index]
         print(f"\n{index + 1}. {grocery_item.name}")  
@@ -34,7 +35,7 @@ while True:
 
     try:
 
-            # Creating a new list/store(obj)
+        # Creating a new list/store(obj)
         if user_input == "1":
             user_input_list_title = input("Enter the name of store: ")
             user_input_list_address = input("Enter address of store: ")
