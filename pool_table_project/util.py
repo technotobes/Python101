@@ -31,9 +31,3 @@ def check_in_write_to_txt(pool_table):
             file.write("\n")
 
 
-# when minutes > 60
-# test checking in and out
-# test calculations
-# check if display work and 
-# how to go back to previous state
-#try and except
