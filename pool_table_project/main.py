@@ -1,5 +1,5 @@
 # Creating a Pool Table Management App
-from pool_table_class import PoolTable
+from pool_table import PoolTable
 from util import display_all_pool_tables
 from util import create_12_tables
 from util import check_in_write_to_txt
