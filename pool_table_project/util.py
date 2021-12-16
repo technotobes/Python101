@@ -12,7 +12,7 @@ def display_all_pool_tables(pool_tables):
     print("________________________________________\n\n")
     for pool_table in pool_tables:
         if pool_table.is_occupied == False:
-            print(f"Pool Table {pool_table.table_number} - UNOCCUPIED\n")
+            print(f"Pool Table {pool_table.table_number} - NOT OCCUPIED\n")
         else:
             print(f"Pool Table {pool_table.table_number} - OCCUPIED - {pool_table.start_time}\n")
     print("________________________________________")
